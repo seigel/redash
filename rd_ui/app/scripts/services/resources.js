@@ -463,7 +463,7 @@
     };
 
     Query.prototype.paramsRequired = function() {
-      return this.getParametersDefs().isRequired();
+      return this.getParameters().isRequired();
     };
 
     Query.prototype.getQueryResult = function (maxAge) {
