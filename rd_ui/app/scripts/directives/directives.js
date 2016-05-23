@@ -520,7 +520,6 @@
         }
 
         scope.showParameterSettings = function(param) {
-          console.log('Settings for:', param);
           $modal.open({
             templateUrl: '/views/dialogs/parameter_settings.html',
             controller: ['$scope', '$modalInstance', function($scope, $modalInstance) {
