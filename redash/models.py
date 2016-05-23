@@ -589,6 +589,7 @@ class Query(ModelTimestampsMixin, BaseModel, BelongsToOrgMixin):
     last_modified_by = peewee.ForeignKeyField(User, null=True, related_name="modified_queries")
     is_archived = peewee.BooleanField(default=False, index=True)
     schedule = peewee.CharField(max_length=10, null=True)
+    options = JSONField(default={})
 
     class Meta:
         db_table = 'queries'
@@ -606,7 +607,8 @@ class Query(ModelTimestampsMixin, BaseModel, BelongsToOrgMixin):
             'is_archived': self.is_archived,
             'updated_at': self.updated_at,
             'created_at': self.created_at,
-            'data_source_id': self.data_source_id
+            'data_source_id': self.data_source_id,
+            'options': self.options
         }
 
         if with_user:
