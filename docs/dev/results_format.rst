@@ -11,7 +11,7 @@ All data sources in Re:dash return the following results in JSON format:
                // Required: a unique identifier of the column name in this result
                "name" : "COLUMN_NAME",
                // Required: friendly name of the column that will appear in the results
-               "friendly_name" : "FRIENDLY_NAME",
+               "friendly_name" : "FRIENDLY_NAME", // not currently implemented/used
                // Optional: If not specified sort might not work well.
                // Supported types: integer, float, boolean, string (default), datetime (ISO-8601 text format)
                "type" : "VALUE_TYPE"
